@@ -18,11 +18,12 @@ namespace TenisKata
 
         public int GetLostPoints();
 
-        public string PlayAndResult();
+        public int PlayAndResult();
 
         public void InitializeScoreGame();
 
-        public void AddPoint();
+        public void AddDefeatPoint();
+        public void AddWinPoint();
 
         public void AddGame();
 
@@ -33,5 +34,12 @@ namespace TenisKata
         public List<ISetTenis> GetSets();
         public Guid GetIdPlayer();
 
+        public void NewGame(IGame game);
+
+        public void AddCurrentGamePoint();
+
+        public void ResetCurrentGamePoints();
+
+        public int GetCurrentGamePoint();
     }
 }
