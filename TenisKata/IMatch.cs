@@ -26,5 +26,8 @@ namespace TenisKata
 
         public List<ISetTenis> GetSets();
 
+        public void Start();
+
+        public void PlaySet();
     }
 }
