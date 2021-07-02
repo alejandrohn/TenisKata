@@ -8,5 +8,17 @@ namespace TenisKata
         {
             Console.WriteLine("Hello World!");
         }
+
+        static void PlayMatch()
+        {
+            Player playerA = new Player();
+            Player playerB = new Player();
+
+            Match match = new Match();
+
+
+
+
+        }
     }
 }
