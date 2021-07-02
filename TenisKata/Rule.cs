@@ -8,7 +8,7 @@ namespace TenisKata
     {
         public bool IsCompleteRulesForVictory(IPlayer playerServe, IPlayer playerRest, int SetsForWin)
         {
-          
+            return false;
         }
 
         public bool IsCompleteRulesForVictoryGame(IPlayer playerServe, IPlayer playerRest, int PointsForWin)
@@ -30,7 +30,7 @@ namespace TenisKata
 
         public bool IsCompleteRulesForVictorySet(IPlayer playerServe, IPlayer playerRest, int GamesForWin)
         {
-            
+            return false;
         }
     }
 }

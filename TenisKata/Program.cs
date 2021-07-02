@@ -14,7 +14,7 @@ namespace TenisKata
             Player playerA = new Player();
             Player playerB = new Player();
 
-            Match match = new Match();
+            Match match = new Match(playerA, playerB);
 
 
 
