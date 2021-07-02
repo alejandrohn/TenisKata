@@ -23,5 +23,13 @@ namespace TenisKata
         public bool IsMatchedPlayers();
 
         public int InitialScore();
+
+        public void PlayNewPoint();
+
+      
+
+        public void SetPlayerWin(Rule rule, int pointsForWin);
+
+
     }
 }
