@@ -6,6 +6,8 @@ namespace TenisKata
 {
     class Rule : IRule
     {
+        private const int DIFERENCE_POINTS_FOR_WIN = 2;
+
         public bool IsCompleteRulesForVictory(IPlayer playerServe, IPlayer playerRest, int SetsForWin)
         {
             return false;
@@ -13,17 +15,17 @@ namespace TenisKata
 
         public bool IsCompleteRulesForVictoryGame(IPlayer playerServe, IPlayer playerRest, int PointsForWin)
         {
-            if (playerServe.GetCurrentGamePoint() == PointsForWin && playerRest.GetCurrentGamePoint() == (PointsForWin - 2))
+            if (playerServe.GetCurrentGamePoint() == PointsForWin && playerRest.GetCurrentGamePoint() == (PointsForWin - DIFERENCE_POINTS_FOR_WIN))
                 return true;
 
-            if (playerRest.GetCurrentGamePoint() == PointsForWin && playerServe.GetCurrentGamePoint() == (PointsForWin - 2))
+            if (playerRest.GetCurrentGamePoint() == PointsForWin && playerServe.GetCurrentGamePoint() == (PointsForWin - DIFERENCE_POINTS_FOR_WIN))
                 return true;
 
-            if ((playerServe.GetCurrentGamePoint() - playerRest.GetCurrentGamePoint()) == 2)
-                return true;
-
-            if ((playerRest.GetCurrentGamePoint() - playerServe.GetCurrentGamePoint()) == 2)
-                return true;
+            if (playerServe.GetCurrentGamePoint() > PointsForWin || playerRest.GetCurrentGamePoint() > PointsForWin)
+            {
+                if (Math.Abs(playerServe.GetCurrentGamePoint() - playerRest.GetCurrentGamePoint()) == DIFERENCE_POINTS_FOR_WIN)
+                    return true;
+            }
 
             return false;
         }
