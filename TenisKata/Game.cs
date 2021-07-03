@@ -119,13 +119,13 @@ namespace TenisKata
         {
             if (rule.IsCompleteRulesForVictoryGame(playerService, playerRest, pointsForWin))
             {
-                if (playerService.GetCurrentGamePoint() > playerRest.GetCurrentGamePoint())
+                if (playerService.GetCurrentGamePoints() > playerRest.GetCurrentGamePoints())
                 {
                     playerWin = playerService;
                     playerDefeat = playerRest;
                     playerService.AddGame();
                 }
-                else if (playerRest.GetCurrentGamePoint() > playerService.GetCurrentGamePoint())
+                else if (playerRest.GetCurrentGamePoints() > playerService.GetCurrentGamePoints())
                 {
                     playerWin = playerRest;
                     playerDefeat = playerService;

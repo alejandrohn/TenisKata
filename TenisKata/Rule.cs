@@ -15,15 +15,15 @@ namespace TenisKata
 
         public bool IsCompleteRulesForVictoryGame(IPlayer playerServe, IPlayer playerRest, int PointsForWin)
         {
-            if (playerServe.GetCurrentGamePoint() == PointsForWin && playerRest.GetCurrentGamePoint() == (PointsForWin - DIFERENCE_POINTS_FOR_WIN))
+            if (playerServe.GetCurrentGamePoints() == PointsForWin && playerRest.GetCurrentGamePoints() == (PointsForWin - DIFERENCE_POINTS_FOR_WIN))
                 return true;
 
-            if (playerRest.GetCurrentGamePoint() == PointsForWin && playerServe.GetCurrentGamePoint() == (PointsForWin - DIFERENCE_POINTS_FOR_WIN))
+            if (playerRest.GetCurrentGamePoints() == PointsForWin && playerServe.GetCurrentGamePoints() == (PointsForWin - DIFERENCE_POINTS_FOR_WIN))
                 return true;
 
-            if (playerServe.GetCurrentGamePoint() > PointsForWin || playerRest.GetCurrentGamePoint() > PointsForWin)
+            if (playerServe.GetCurrentGamePoints() > PointsForWin || playerRest.GetCurrentGamePoints() > PointsForWin)
             {
-                if (Math.Abs(playerServe.GetCurrentGamePoint() - playerRest.GetCurrentGamePoint()) == DIFERENCE_POINTS_FOR_WIN)
+                if (Math.Abs(playerServe.GetCurrentGamePoints() - playerRest.GetCurrentGamePoints()) == DIFERENCE_POINTS_FOR_WIN)
                     return true;
             }
 

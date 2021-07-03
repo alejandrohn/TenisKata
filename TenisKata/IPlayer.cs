@@ -40,6 +40,6 @@ namespace TenisKata
 
         public void ResetCurrentGamePoints();
 
-        public int GetCurrentGamePoint();
+        public int GetCurrentGamePoints();
     }
 }

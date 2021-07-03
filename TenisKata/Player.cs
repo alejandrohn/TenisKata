@@ -43,7 +43,7 @@ namespace TenisKata
             this.currentGamePoints++;
         }
 
-        public int GetCurrentGamePoint()
+        public int GetCurrentGamePoints()
         {
            return this.currentGamePoints;
         }
