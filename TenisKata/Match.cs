@@ -89,7 +89,7 @@ namespace TenisKata
 
         public bool IsCompleteRulesForVictory()
         {
-            return rule.IsCompleteRulesForVictory(this.playerA, this.playerB, this.winMatch, GetTotalPointsMatch());
+            return rule.IsCompleteRulesForVictory(this.playerA, this.playerB, this.winMatch, GetTotalPointsMatch(), this.numberOfPointsForStop);
         }
 
         public bool IsCompleteRulesForVictorySet()
@@ -116,7 +116,7 @@ namespace TenisKata
         {
             if(IsCompleteRulesForVictory())
             {
-                return rule.GetWinner(playerA, playerB, this.winMatch, this.GetTotalPointsMatch());
+                return rule.GetWinner(playerA, playerB, this.winMatch, this.GetTotalPointsMatch(), this.numberOfPointsForStop);
             }
 
             throw new Exception("Todavía no ha acabado el juego");
@@ -133,7 +133,7 @@ namespace TenisKata
         {
             SetTenis setTenis = new SetTenis();
 
-            while (!IsCompleteRulesForVictorySet())
+            while (!IsCompleteRulesForVictorySet() && (this.totalPoints < this.numberOfPointsForStop))
             {
                 IGame game  = PlayGame();
                 setTenis.AddGameToSet(game);
