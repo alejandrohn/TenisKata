@@ -10,6 +10,6 @@ namespace TenisKata
 
         public bool IsCompleteRulesForVictorySet(IPlayer playerServe, IPlayer playerRest, int GamesForWin);
 
-        public bool IsCompleteRulesForVictory(IPlayer playerServe, IPlayer playerRest, int SetsForWin);
+        public bool IsCompleteRulesForVictory(IPlayer playerServe, IPlayer playerRest, int setsForWin, int totalPointsMatch);
     }
 }
