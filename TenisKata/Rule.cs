@@ -10,11 +10,11 @@ namespace TenisKata
         private const int DIFERENCE_GAMES_FOR_WIN_SET = 2;
         private const int VICTORY_FOR_POINTS = 10000;
 
-        public bool IsCompleteRulesForVictory(IPlayer playerServe, IPlayer playerRest, int setsForWin, int totalPointsMatch, int point_for_stop = VICTORY_FOR_POINTS)
+        public bool IsCompleteRulesForVictory(IPlayer playerServe, IPlayer playerRest, int setsForWin, int totalPointsMatch, int points_for_stop = VICTORY_FOR_POINTS)
         {
             if (playerServe.GetWinSets() == setsForWin || playerRest.GetWinSets() == setsForWin)
                 return true;
-            if (totalPointsMatch == point_for_stop)
+            if (totalPointsMatch == points_for_stop)
                 return true;
 
             return false;
@@ -50,7 +50,7 @@ namespace TenisKata
             return false;
         }
 
-        public IPlayer GetWinner(IPlayer playerServe, IPlayer playerRest, int setsForWin, int totalPointsMatch, int point_for_stop = VICTORY_FOR_POINTS)
+        public IPlayer GetWinner(IPlayer playerServe, IPlayer playerRest, int setsForWin, int totalPointsMatch, int points_for_stop = VICTORY_FOR_POINTS)
         {
             if (playerServe.GetWinSets() == setsForWin)
                 return playerServe;
@@ -58,7 +58,7 @@ namespace TenisKata
             if (playerRest.GetWinSets() == setsForWin)
                 return playerRest;
 
-            if(totalPointsMatch >= point_for_stop)
+            if(totalPointsMatch >= points_for_stop)
             {
                 if (playerServe.GetWinGames() > playerRest.GetWinGames())
                     return playerServe;
