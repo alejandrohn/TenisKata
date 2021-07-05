@@ -56,7 +56,7 @@ namespace TenisKata
 
         public bool IsMatchedPlayers()
         {
-            throw new NotImplementedException();
+            return this.playerService.GetCurrentGamePoints() == this.playerRest.GetCurrentGamePoints();
         }
 
         public IPlayer PlayerDefeat()
@@ -124,11 +124,14 @@ namespace TenisKata
                     playerWin = playerService;
                     playerDefeat = playerRest;
                     playerService.AddGame();
+                    playerDefeat.AddDefeatGame();
                 }
                 else if (playerRest.GetCurrentGamePoints() > playerService.GetCurrentGamePoints())
                 {
                     playerWin = playerRest;
                     playerDefeat = playerService;
+                    playerRest.AddGame();
+                    playerService.AddDefeatGame();
                 }
             }
         }
