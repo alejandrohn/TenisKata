@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    class SetTenis : ISetTenis
+    public class SetTenis : ISetTenis
     {
         private List<IGame> games;
         private IPlayer playerA;

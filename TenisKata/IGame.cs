@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    interface IGame
+    public interface IGame
     {
         public int TotalOfPoints();
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    class Rule : IRule
+    public class Rule : IRule
     {
         private const int DIFERENCE_POINTS_FOR_WIN = 2;
         private const int DIFERENCE_GAMES_FOR_WIN_SET = 2;

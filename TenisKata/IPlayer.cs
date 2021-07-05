@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    interface IPlayer
+    public interface IPlayer
     {
         public int GetWinGames();
 

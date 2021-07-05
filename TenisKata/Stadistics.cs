@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    class Stadistics
+    public class Stadistics
     {
         private IMatch match;
         private const int START_NUMBER_SET = 1;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    interface ISetTenis
+    public interface ISetTenis
     {
         public IPlayer PlayerVictory();
 

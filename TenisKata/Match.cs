@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    class Match : IMatch
+    public class Match : IMatch
     {
 
         private int winSet;

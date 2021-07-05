@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    interface IMatch
+   public interface IMatch
     {
         public int GetNumberOfSetsForWinMatch();
 

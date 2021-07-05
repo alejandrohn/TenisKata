@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TenisKata
 {
-    interface IRule
+    public interface IRule
     {
         public bool IsCompleteRulesForVictoryGame(IPlayer playerServe, IPlayer playerRest, int PointsForWin);
 
