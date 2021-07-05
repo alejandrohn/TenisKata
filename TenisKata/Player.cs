@@ -8,20 +8,25 @@ namespace TenisKata
     {
 
         private List<IGame> games;
-        private List<ISetTenis> sets;
+        private List<IGame> defeatGames;
+        private List<ISetTenis> winSets;
         private IGame currentGame;
         private int totalWinPoint;
         private int totalDefeatPoint;
         private string[] resultType;
         private Random rnd;
+        private int currentGamesInSet;
+        private string namePlayer;
+
 
         private Guid idPlayer;
         private int currentGamePoints;
 
         private const int INIT_POINT = 0;
 
-        public Player()
+        public Player(string name)
         {
+            this.namePlayer = name;
             Init();
         }
 
@@ -29,13 +34,18 @@ namespace TenisKata
         {
             this.idPlayer = Guid.NewGuid();
             this.games = new List<IGame>();
-            this.sets = new List<ISetTenis>();
+            this.winSets = new List<ISetTenis>();
+            this.defeatGames = new List<IGame>();
             this.resultType = new string[] { "0", "1" };
 
             this.totalWinPoint = 0;
             this.totalDefeatPoint = 0;
             this.currentGamePoints = INIT_POINT;
+            this.currentGamesInSet = 0;
             rnd = new Random();
+
+            if (string.IsNullOrEmpty(this.namePlayer))
+                throw new Exception("Agregue un nombre válido para el jugador");
         }
 
         public void AddCurrentGamePoint()
@@ -57,6 +67,23 @@ namespace TenisKata
         {
             this.games.Add(this.currentGame);
             this.currentGame = null;
+            this.currentGamesInSet++;
+        }
+
+        public int GetCurrentGamesInSet()
+        {
+            return this.currentGamesInSet;
+        }
+
+        public void NewSet()
+        {
+            this.currentGamesInSet = 0;
+        }
+
+        public void AddDefeatGame()
+        {
+            this.defeatGames.Add(this.currentGame);
+            this.currentGame = null;
         }
 
         public void AddDefeatPoint()
@@ -69,29 +96,30 @@ namespace TenisKata
             this.totalWinPoint++;
         }
 
-        public void AddSet()
+        public void AddWinSet(ISetTenis setTenis)
         {
-            throw new NotImplementedException();
+            winSets.Add(setTenis);
         }
 
         public List<IGame> GetGames()
         {
-            throw new NotImplementedException();
+            return this.games;
         }
 
         public Guid GetIdPlayer()
         {
-            throw new NotImplementedException();
+            return idPlayer;
         }
 
         public int GetLostGames()
         {
-            throw new NotImplementedException();
+           
+            return this.defeatGames.Count;
         }
 
         public int GetLostPoints()
         {
-            throw new NotImplementedException();
+            return totalDefeatPoint;
         }
 
         public int GetLostSets()
@@ -106,17 +134,17 @@ namespace TenisKata
 
         public int GetWinGames()
         {
-            throw new NotImplementedException();
+            return this.games.Count;
         }
 
         public int GetWinPoints()
         {
-            throw new NotImplementedException();
+            return totalWinPoint;
         }
 
         public int GetWinSets()
         {
-            throw new NotImplementedException();
+            return this.winSets.Count;
         }
 
         public void InitializeScoreGame()
@@ -133,6 +161,11 @@ namespace TenisKata
         {
             int rtIndex = rnd.Next(this.resultType.Length);
             return rtIndex;
+        }
+
+        public string GetPlayerName()
+        {
+            return this.namePlayer;
         }
 
     }

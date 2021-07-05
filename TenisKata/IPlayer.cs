@@ -27,7 +27,7 @@ namespace TenisKata
 
         public void AddGame();
 
-        public void AddSet();
+        public void AddWinSet(ISetTenis setTenis);
 
         public List<IGame> GetGames();
 
@@ -41,5 +41,14 @@ namespace TenisKata
         public void ResetCurrentGamePoints();
 
         public int GetCurrentGamePoints();
+
+        public void AddDefeatGame();
+
+        public int GetCurrentGamesInSet();
+
+        public void NewSet();
+
+        public string GetPlayerName();
+       
     }
 }
