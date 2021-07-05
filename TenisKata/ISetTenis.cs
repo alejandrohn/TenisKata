@@ -15,5 +15,9 @@ namespace TenisKata
         public int TotalGamesPlayed();
 
         public List<IGame> GetGames();
+
+        public void AddDefeatPlayer(IPlayer player);
+
+        public void AddWinPlayer(IPlayer player);
     }
 }
