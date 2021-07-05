@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TenisKata", "TenisKata.csproj", "{FDBEA0BC-CCD9-41FD-A628-31FA525807E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "..\UnitTesting\UnitTesting.csproj", "{B4D3CE3B-B02A-44AD-B39B-C572B8F0523E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestKataTenis", "..\UnitTestKataTenis\UnitTestKataTenis.csproj", "{080DF082-2014-4D85-918E-19FD427CA288}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{FDBEA0BC-CCD9-41FD-A628-31FA525807E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDBEA0BC-CCD9-41FD-A628-31FA525807E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDBEA0BC-CCD9-41FD-A628-31FA525807E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4D3CE3B-B02A-44AD-B39B-C572B8F0523E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4D3CE3B-B02A-44AD-B39B-C572B8F0523E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4D3CE3B-B02A-44AD-B39B-C572B8F0523E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D3CE3B-B02A-44AD-B39B-C572B8F0523E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{080DF082-2014-4D85-918E-19FD427CA288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{080DF082-2014-4D85-918E-19FD427CA288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{080DF082-2014-4D85-918E-19FD427CA288}.Release|Any CPU.ActiveCfg = Release|Any CPU
