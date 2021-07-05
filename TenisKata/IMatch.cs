@@ -29,5 +29,15 @@ namespace TenisKata
         public void Start();
 
         public void PlaySet();
+
+        public IGame PlayGame();
+
+        public IPlayer GetPlayer1();
+
+        public IPlayer GetPlayer2();
+
+        public int GetPlayedSets();
+
+        public IPlayer GetWinPlayer();
     }
 }
